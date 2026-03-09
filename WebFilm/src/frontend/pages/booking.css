@@ -1,0 +1,210 @@
+.booking-container {
+  max-width: 1350px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+ 
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.step.active {
+  color: #1d4ed8;
+}
+
+.step-connector {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background-color: #e5e7eb;
+  z-index: -1;
+}
+
+.main-content {
+  display: flex;
+  gap: 30px;
+   width:'100vw',
+}
+
+.seat-section {
+  flex: 2;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.showtime-info {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 15px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.legend-dot.available { background-color: #d1d5db; }
+.legend-dot.selected { background-color: #3b82f6; }
+.legend-dot.held { background-color: #f59e0b; }
+.legend-dot.booked { background-color: #ef4444; } /* Ghế đã bán là đỏ */
+.legend-dot.type { background-color: #00ff48; } /* Ghế đã bán là đỏ */
+
+.seat-map-container {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.screen {
+  background: #4b5563;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.action-buttons {
+  text-align: center;
+}
+
+.countdown-warning {
+  color: #f59e0b;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.countdown-timer {
+  color: #ef4444;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.confirm-button, .next-button, .pay-button, .cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm-button { background-color: #3b82f6; }
+.next-button { background-color: #10b981; }
+.pay-button { background-color: #10b981; }
+.cancel-button { background-color: #ef4444; }
+
+.confirm-button:hover { background-color: #2563eb; }
+.next-button:hover { background-color: #059669; }
+.pay-button:hover { background-color: #059669; }
+.cancel-button:hover { background-color: #dc2626; }
+
+.movie-info {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.info-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.info-detail {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.payment-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.error-message {
+  color: #e53e3e;
+  text-align: center;
+  padding: 20px;
+}
+
+/* CSS cho SeatMap (nếu cần) */
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 5px;
+  justify-content: center;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  background-color: #d1d5db;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.seat.available { background-color: #d1d5db; }
+.seat.selected { background-color: #3b82f6; }
+.seat.held { background-color: #f59e0b; }
+.seat.booked { background-color: #ef4444; } /* Ghế đã bán là đỏ */

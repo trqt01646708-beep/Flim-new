@@ -1,0 +1,68 @@
+.seat-map {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.seat-row-label {
+  width: 30px;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #4b5563;
+}
+
+.seat-button {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #d1d5db; /* Ghế trống */
+  color: #1f2937;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seat-button:hover:not(:disabled) {
+  background-color: #9ca3af; /* Hover cho ghế trống */
+}
+
+.seat-button.selected {
+  background-color: #3b82f6; /* Ghế đang chọn */
+  color: #ffffff;
+}
+
+.seat-button.held {
+  background-color: #f59e0b; /* Ghế được giữ */
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.seat-button.booked {
+  background-color: #ef4444; /* Ghế đã bán */
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.seat-button:disabled {
+  opacity: 0.6;
+}
+
+.error-message {
+  color: #e53e3e;
+  text-align: center;
+  padding: 10px;
+}
+.seat-button.vip {
+  background-color: #3cb043; /* Xanh lá cây */
+  color: white;
+  border: 1px solid #2e8b3d;
+}
